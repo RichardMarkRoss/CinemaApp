@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fad52fb2-1228-4e3b-b769-c6dfe20fb61b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/ExceptionsThatAreThrown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/testCinema.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CinemaSeats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaSeats.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CinemaSeats.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CinemaSeats.class" afterDir="false" />
     </list>
@@ -50,13 +45,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.testCinema">
-    <configuration name="ExceptionsThatAreThrown.shouldThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.CinemaSeats">
+    <configuration name="CinemaSeats" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CinemaSeats" />
       <module name="CinemaSeats" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ExceptionsThatAreThrown" />
-      <option name="METHOD_NAME" value="shouldThrowException" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,11 +94,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CinemaSeats" />
         <item itemvalue="JUnit.testCinema" />
         <item itemvalue="JUnit.testCinema.showTheSeating" />
         <item itemvalue="JUnit.testCinema.bookingMultipleSeats" />
         <item itemvalue="JUnit.testCinema.shouldGreet" />
-        <item itemvalue="JUnit.ExceptionsThatAreThrown.shouldThrowException" />
       </list>
     </recent_temporary>
   </component>

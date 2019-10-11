@@ -7,7 +7,7 @@ public class CinemaSeats {
     static int total;
     static int totalBooking;
 
-    CinemaSeats(){
+    CinemaSeats() {
         clear();
     }
 
@@ -15,10 +15,10 @@ public class CinemaSeats {
         this.list = list;
     }
 
-    void show(){
+    void show() {
         System.out.println("------SCREEN------");
         for (int i = 0; i < list.length; i++) {
-            System.out.print((i+1)+". ");
+            System.out.print((i + 1) + ". ");
             for (int j = 0; j < list[i].length; j++) {
                 System.out.print(list[i][j] + " ");
             }
@@ -27,16 +27,16 @@ public class CinemaSeats {
         System.out.println("   1 2 3 4 5 6 7 8 ");
     }
 
-    void clear(){
+    void clear() {
         for (int i = 0; i < list.length; i++) {
             for (int j = 0; j < list[i].length; j++) {
-               list[i][j] = ("#");
+                list[i][j] = ("#");
             }
         }
     }
 
     boolean isSeatBooking(int row, int seat) {
-        if (list[row-1][seat-1].equals("x")) {
+        if (list[row - 1][seat - 1].equals("x")) {
             return true;
         } else {
             return false;
@@ -44,27 +44,62 @@ public class CinemaSeats {
     }
 
     boolean bookSeat(int row, int seat) {
-                if (list[row-1][seat-1].equals("x")) {
-                    return false;
-                } else {
-                    list[row-1][seat-1] = "x";
+        if (list[row - 1][seat - 1].equals("x")) {
+            return false;
+        } else {
+            list[row - 1][seat - 1] = "x";
         }
-                return false;
+        return false;
     }
 
     boolean book(int tickets, String location) {
         totalBooking += tickets;
-        int[] array = location.chars().map(c -> c - '0').toArray();
+        int tick = 0;
         try {
-            for (int k = 0; k < tickets; k++) {
-                list[array[0]][array[1] + k] = "x";
+            if (location.equalsIgnoreCase("front")) {
+                for (int j = 0; j <= 2; j++) {
+                    for (int k = 0; k < list[j].length; k++) {
+                        if (list[j][k].equals("#")) {
+                            if (tick < tickets) {
+                                tick++;
+                                list[j][k] = "x";
+                            }
+                        }
+                    }
+                }
+            } else if (location.equalsIgnoreCase("middle")) {
+                for (int j = 3; j <= 5; j++) {
+                    for (int k = 0; k < list[j].length; k++) {
+                        if (list[j][k].equals("#")) {
+                            if (tick < tickets) {
+                                tick++;
+                                list[j][k] = "x";
+                            }
+                        }
+                    }
+                }
+            } else if (location.equalsIgnoreCase("back")) {
+                for (int j = 6; j <= 8; j++) {
+                    for (int k = 0; k < list[j].length; k++) {
+                        if (list[j][k].equals("#")) {
+                            if (tick < tickets) {
+                                tick++;
+                                list[j][k] = "x";
+                            }
+                        }
+                    }
+                }
+            } else {
+                return false;
             }
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("there are not enough seats");
         }
         return false;
     }
-    int totalIncome(){
+
+
+    int totalIncome() {
         for (int i = 0; i < list.length; i++) {
             for (int j = 0; j < list[i].length; j++) {
                 if (list[i][j].equals("x")) {
@@ -81,11 +116,11 @@ public class CinemaSeats {
         return total;
     }
 
-    int totalBookings(){
+    int totalBookings() {
         for (int i = 0; i < list.length; i++) {
             for (int j = 0; j < list[i].length; j++) {
                 if (list[i][j].equals("x")) {
-                    totalBooking ++;
+                    totalBooking++;
                 }
             }
         }
@@ -95,10 +130,11 @@ public class CinemaSeats {
     public static void main(String[] args) {
         CinemaSeats cinemaSeats = new CinemaSeats();
         try {
-            cinemaSeats.bookSeat(6,4);
-            System.out.println(cinemaSeats.isSeatBooking(6,4));
-            System.out.println("R"+cinemaSeats.totalIncome());
-            System.out.println("amounts of seats: "+cinemaSeats.totalBookings());
+            cinemaSeats.book(4,"middle");
+            cinemaSeats.book(4,"middle");
+            cinemaSeats.book(4,"back");
+            cinemaSeats.book(4,"front");
+            cinemaSeats.book(2,"middle");
             cinemaSeats.show();
         } catch (Exception e) {
             e.printStackTrace();
