@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fad52fb2-1228-4e3b-b769-c6dfe20fb61b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/TestString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/TestBookMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CinemaSeats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CinemaSeats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/ExceptionsThatAreThrown.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CinemaSeats.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CinemaSeats.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,10 +48,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CinemaSeats">
+  <component name="RunManager" selected="JUnit.TestBookMethod">
     <configuration name="CinemaSeats" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CinemaSeats" />
       <module name="CinemaSeats" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestString" />
+      <module name="CinemaSeats" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBookMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CinemaSeats" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestBookMethod" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBookMethod.TestMultipleFrontSeats" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CinemaSeats" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestBookMethod" />
+      <option name="METHOD_NAME" value="TestMultipleFrontSeats" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -62,43 +91,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testCinema.bookingMultipleSeats" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CinemaSeats" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="testCinema" />
-      <option name="METHOD_NAME" value="bookingMultipleSeats" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testCinema.shouldGreet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CinemaSeats" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="testCinema" />
-      <option name="METHOD_NAME" value="shouldGreet" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testCinema.showTheSeating" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CinemaSeats" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="testCinema" />
-      <option name="METHOD_NAME" value="showTheSeating" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestBookMethod" />
+        <item itemvalue="JUnit.TestBookMethod.TestMultipleFrontSeats" />
         <item itemvalue="Application.CinemaSeats" />
+        <item itemvalue="Application.TestString" />
         <item itemvalue="JUnit.testCinema" />
-        <item itemvalue="JUnit.testCinema.showTheSeating" />
-        <item itemvalue="JUnit.testCinema.bookingMultipleSeats" />
-        <item itemvalue="JUnit.testCinema.shouldGreet" />
       </list>
     </recent_temporary>
   </component>

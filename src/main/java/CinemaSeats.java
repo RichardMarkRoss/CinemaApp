@@ -6,6 +6,7 @@ public class CinemaSeats {
     String[][] list = new String[9][8];
     static int total;
     static int totalBooking;
+    List<String> passing = new ArrayList<String>();
 
     CinemaSeats() {
         clear();
@@ -54,47 +55,62 @@ public class CinemaSeats {
 
     boolean book(int tickets, String location) {
         totalBooking += tickets;
-        int tick = 0;
-        try {
+        int ticket = 0;
+
+        for (int j = 0; j < tickets; j++) {
+            passing.add("#");
+        }
             if (location.equalsIgnoreCase("front")) {
-                for (int j = 0; j <= 2; j++) {
-                    for (int k = 0; k < list[j].length; k++) {
-                        if (list[j][k].equals("#")) {
-                            if (tick < tickets) {
-                                tick++;
-                                list[j][k] = "x";
+                for (int j = 0; j < 3; j++) {
+                    if (String.join("", list[j]).contains(String.join("", passing))) {
+                        for (int k = 0; k < list[j].length; k++) {
+                            if (list[j][k].equals("#")) {
+                                if (ticket < tickets) {
+                                    ticket++;
+                                    list[j][k] = "x";
+                                }
                             }
                         }
+                        passing.clear();
+                    } else if (j == 2) {
+                        return false;
                     }
                 }
             } else if (location.equalsIgnoreCase("middle")) {
-                for (int j = 3; j <= 5; j++) {
-                    for (int k = 0; k < list[j].length; k++) {
-                        if (list[j][k].equals("#")) {
-                            if (tick < tickets) {
-                                tick++;
-                                list[j][k] = "x";
+                for (int j = 3; j < 6; j++) {
+                    if (String.join("", list[j]).contains(String.join("", passing))) {
+                        for (int k = 0; k < list[j].length; k++) {
+                            if (list[j][k].equals("#")) {
+                                if (ticket < tickets) {
+                                    ticket++;
+                                    list[j][k] = "x";
+                                }
                             }
                         }
+                        passing.clear();
+                    } else if (j == 5) {
+                        return false;
                     }
                 }
             } else if (location.equalsIgnoreCase("back")) {
-                for (int j = 6; j <= 8; j++) {
-                    for (int k = 0; k < list[j].length; k++) {
-                        if (list[j][k].equals("#")) {
-                            if (tick < tickets) {
-                                tick++;
-                                list[j][k] = "x";
+                for (int j = 6; j < 9; j++) {
+                    if (String.join("", list[j]).contains(String.join("", passing))) {
+                        for (int k = 0; k < list[j].length; k++) {
+                            if (list[j][k].equals("#")) {
+                                if (ticket < tickets) {
+                                    ticket++;
+                                    list[j][k] = "x";
+                                }
                             }
                         }
+                        passing.clear();
+                    } else if (j == 8) {
+                        return false;
                     }
                 }
             } else {
                 return false;
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("there are not enough seats");
-        }
         return false;
     }
 
@@ -130,15 +146,16 @@ public class CinemaSeats {
     public static void main(String[] args) {
         CinemaSeats cinemaSeats = new CinemaSeats();
         try {
-            cinemaSeats.book(4,"middle");
-            cinemaSeats.book(4,"middle");
-            cinemaSeats.book(4,"back");
-            cinemaSeats.book(4,"front");
-            cinemaSeats.book(2,"middle");
+            cinemaSeats.book(3, "front");
+            cinemaSeats.book(2, "front");
+            cinemaSeats.book(1, "front");
+            cinemaSeats.book(5, "front");
+            cinemaSeats.book(4, "front");
+            cinemaSeats.book(3, "front");
+
             cinemaSeats.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
-
